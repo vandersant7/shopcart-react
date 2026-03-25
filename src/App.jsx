@@ -1,13 +1,19 @@
+import AppRoutes from "./routes"
+import MainLayout from "./layout/MainLayout"
+import { CartProvider } from "./context/CartContext"
+import { AuthProvider } from "./context/AuthContext"
 
-
-function App() {
- 
+export default function App() {
 
   return (
-    <div className="App">
-      <h1>Shopcart React</h1>
-    </div>
+    <AuthProvider>
+      <CartProvider>
+        <MainLayout>
+          <AppRoutes />
+        </MainLayout>
+      </CartProvider>
+    </AuthProvider>
+
   )
 }
 
-export default App
