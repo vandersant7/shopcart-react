@@ -1,7 +1,12 @@
-import { Box, Typography, CardMedia } from "@mui/material";
+import { Box, Typography, CardMedia, IconButton } from "@mui/material";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { formatCurrency } from "../../../utils/formatCurrency";
+import { useCart } from "../../../context/useCart";
 
 export default function CartItem({ item }) {
+    const { incrementItem, decrementItem, removeFromCart } = useCart();
   return (
     <Box
       sx={{
@@ -26,6 +31,20 @@ export default function CartItem({ item }) {
         <Typography variant="body2" color="text.secondary">
           {formatCurrency(item.price)} x {item.quantity || 1}
         </Typography>
+
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <IconButton onClick={() => decrementItem(item.id)}>
+          <RemoveIcon />
+        </IconButton>
+        <Typography>{item.quantity}</Typography>
+        <IconButton onClick={() => incrementItem(item.id)}>
+          <AddIcon />
+        </IconButton>
+
+        <IconButton color="error" onClick={() => removeFromCart(item.id)}>
+          <DeleteIcon />
+        </IconButton>
+      </Box>
       </Box>
     </Box>
   );
