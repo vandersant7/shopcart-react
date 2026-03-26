@@ -1,16 +1,162 @@
-# React + Vite
+# 🛒 ShopCart - E-commerce em React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de e-commerce desenvolvida com React, como proposta prática do curso de React ofertado pela Unifel.
 
-Currently, two official plugins are available:
+O projeto simula uma loja virtual completa, com listagem de produtos, carrinho de compras, autenticação de usuários e fluxo de checkout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* React Router DOM
+* Material UI (MUI)
+* Vite
+* Context API
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Funcionalidades
+
+### 🏠 Home
+
+* Listagem de produtos consumidos de API fake
+* Busca de produtos por nome
+* Hero section com destaque visual
+
+### 🛍️ Carrinho
+
+* Adicionar produtos ao carrinho
+* Incrementar e decrementar quantidade
+* Remover itens
+* Cálculo automático do total
+* Drawer lateral responsivo
+
+### 🔐 Autenticação (Mock)
+
+* Login de usuário
+* Cadastro de usuário
+* Controle de sessão com Context API
+
+### 🧾 Checkout
+
+* Rota protegida (apenas usuários logados)
+* Redirecionamento automático para login
+* Retorno automático ao checkout após autenticação
+
+### 📄 Produto
+
+* Página de detalhes do produto
+* Layout responsivo e organizado
+
+---
+
+## 🧠 Arquitetura do projeto
+
+O projeto segue uma estrutura baseada em **feature-based architecture**, separando responsabilidades por domínio:
+
+```
+src/
+  components/
+    Layout/
+      Header.jsx
+      Footer.jsx
+
+  context/
+    AuthContext.jsx
+    CartContext.jsx
+
+  features/
+    home/
+    product/
+    cart/
+    auth/
+    checkout/
+
+  routes/
+    PrivateRoute.jsx
+
+  utils/
+    formatCurrency.js
+
+  assets/
+```
+
+---
+
+## 🔐 Controle de acesso
+
+* Implementado com `PrivateRoute`
+* Usuários não autenticados são redirecionados para login
+* Após login, o usuário retorna automaticamente para a rota desejada
+
+---
+
+## 💡 Boas práticas aplicadas
+
+* Separação de responsabilidades
+* Componentização reutilizável
+* Context API para estado global
+* Layout responsivo com Material UI
+* Controle de rotas com React Router
+* Estrutura escalável para crescimento do projeto
+
+---
+
+## ▶️ Como rodar o projeto
+
+```bash
+# Clonar repositório
+git clone https://github.com/seu-usuario/shopcart-react.git
+
+# Acessar pasta
+cd shopcart-react
+
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev
+```
+
+---
+
+## 📸 Preview
+
+> (Adicione aqui prints do projeto depois 👀)
+
+---
+
+## 📚 Sobre o projeto
+
+Este projeto foi desenvolvido como parte do curso de React oferecido pela Unifel, com o objetivo de aplicar na prática conceitos fundamentais como:
+
+* Componentização
+* Gerenciamento de estado
+* Navegação entre páginas
+* Integração com APIs
+* Boas práticas de desenvolvimento front-end
+
+---
+
+## 🚀 Melhorias futuras
+
+* Integração com backend real
+* Persistência de dados (localStorage ou API)
+* Sistema de pagamento
+* Validação de formulários
+* Testes automatizados
+* Deploy em produção
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Evandro
+Projeto educacional - Curso de React Unifel
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso educacional e não possui fins comerciais.
