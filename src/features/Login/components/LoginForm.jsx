@@ -1,14 +1,16 @@
-import { Box } from '@mui/material';
-import Input from '../../components/Input/Input';
-import PrimaryButton from '../../components/Button/PrimaryButton';
-import { useAuth } from '../../context/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { Box, Typography } from '@mui/material';
+import Input from '../../../components/Input/Input';
+import PrimaryButton from '../../../components/Button/PrimaryButton';
+import { useAuth } from '../../../context/useAuth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
 export default function LoginForm() {
     const { login } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from || "/";
 
     const [form, setForm] = useState({
         email: "",
@@ -28,9 +30,9 @@ export default function LoginForm() {
         const success = login(form);
 
         if (success) {
-            navigate("/");
+            navigate(from, { replace: true });
         } else {
-            alert("Usuário ou senha inválidos");
+            alert("Email ou senha inválidos");
         }
     }
     return (
@@ -41,6 +43,10 @@ export default function LoginForm() {
             <PrimaryButton type="submit">
                 Entrar
             </PrimaryButton>
+            <Typography variant="body2" textAlign="center">
+                Não tem conta?{" "}
+                <Link to="/register">Criar usuário</Link>
+            </Typography>
         </Box>
     )
 }
