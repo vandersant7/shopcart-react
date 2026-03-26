@@ -1,5 +1,6 @@
 import { Box, Toolbar } from "@mui/material";
-import Header from "../components/Header/Header";
+import Header from "../layout/Header/Header";
+import Footer from "./Footer/Footer";
 
 export default function MainLayout({children}) {
     return (
@@ -9,6 +10,7 @@ export default function MainLayout({children}) {
             <Box component="main" flex={1} display="flex" flexDirection="column">
                 {children}
             </Box>
+            <Footer />
         </Box>
     )
 }
