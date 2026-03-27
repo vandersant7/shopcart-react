@@ -8,11 +8,11 @@ O projeto simula uma loja virtual completa, com listagem de produtos, carrinho d
 
 ## 🚀 Tecnologias utilizadas
 
-* React
-* React Router DOM
-* Material UI (MUI)
-* Vite
-* Context API
+- React
+- React Router DOM
+- Material UI (MUI)
+- Vite
+- Context API
 
 ---
 
@@ -20,34 +20,34 @@ O projeto simula uma loja virtual completa, com listagem de produtos, carrinho d
 
 ### 🏠 Home
 
-* Listagem de produtos consumidos de API fake
-* Busca de produtos por nome
-* Hero section com destaque visual
+- Listagem de produtos consumidos de API fake
+- Busca de produtos por nome
+- Hero section com destaque visual
 
 ### 🛍️ Carrinho
 
-* Adicionar produtos ao carrinho
-* Incrementar e decrementar quantidade
-* Remover itens
-* Cálculo automático do total
-* Drawer lateral responsivo
+- Adicionar produtos ao carrinho
+- Incrementar e decrementar quantidade
+- Remover itens
+- Cálculo automático do total
+- Drawer lateral responsivo
 
 ### 🔐 Autenticação (Mock)
 
-* Login de usuário
-* Cadastro de usuário
-* Controle de sessão com Context API
+- Login de usuário
+- Cadastro de usuário
+- Controle de sessão com Context API
 
 ### 🧾 Checkout
 
-* Rota protegida (apenas usuários logados)
-* Redirecionamento automático para login
-* Retorno automático ao checkout após autenticação
+- Rota protegida (apenas usuários logados)
+- Redirecionamento automático para login
+- Retorno automático ao checkout após autenticação
 
 ### 📄 Produto
 
-* Página de detalhes do produto
-* Layout responsivo e organizado
+- Página de detalhes do produto
+- Layout responsivo e organizado
 
 ---
 
@@ -57,7 +57,6 @@ O projeto segue uma estrutura baseada em **feature-based architecture**, separan
 
 ```
 src/
-  components/
     Layout/
       Header.jsx
       Footer.jsx
@@ -86,20 +85,20 @@ src/
 
 ## 🔐 Controle de acesso
 
-* Implementado com `PrivateRoute`
-* Usuários não autenticados são redirecionados para login
-* Após login, o usuário retorna automaticamente para a rota desejada
+- Implementado com `PrivateRoute`
+- Usuários não autenticados são redirecionados para login
+- Após login, o usuário retorna automaticamente para a rota desejada
 
 ---
 
 ## 💡 Boas práticas aplicadas
 
-* Separação de responsabilidades
-* Componentização reutilizável
-* Context API para estado global
-* Layout responsivo com Material UI
-* Controle de rotas com React Router
-* Estrutura escalável para crescimento do projeto
+- Separação de responsabilidades
+- Componentização reutilizável
+- Context API para estado global
+- Layout responsivo com Material UI
+- Controle de rotas com React Router
+- Estrutura escalável para crescimento do projeto
 
 ---
 
@@ -123,30 +122,35 @@ npm run dev
 
 ## 📸 Preview
 
-> (Adicione aqui prints do projeto depois 👀)
 
----
+<div align="center">
+    <img src="src/assets/images/printscreen_desktop.webp" alt="Desktop Screenshot" width="50%"/>
+</div>
+<br />
+<div align="center">
+    <img src="src/assets/images/printscreen_mobile.webp" alt="Mobile Screenshot" width="50%"/>
+</div>
 
 ## 📚 Sobre o projeto
 
 Este projeto foi desenvolvido como parte do curso de React oferecido pela Unifel, com o objetivo de aplicar na prática conceitos fundamentais como:
 
-* Componentização
-* Gerenciamento de estado
-* Navegação entre páginas
-* Integração com APIs
-* Boas práticas de desenvolvimento front-end
+- Componentização
+- Gerenciamento de estado
+- Navegação entre páginas
+- Integração com APIs
+- Boas práticas de desenvolvimento front-end
 
 ---
 
 ## 🚀 Melhorias futuras
 
-* Integração com backend real
-* Persistência de dados (localStorage ou API)
-* Sistema de pagamento
-* Validação de formulários
-* Testes automatizados
-* Deploy em produção
+- Integração com backend real
+- Persistência de dados (localStorage ou API)
+- Sistema de pagamento
+- Validação de formulários
+- Testes automatizados
+- Deploy em produção
 
 ---
 
