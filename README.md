@@ -106,7 +106,7 @@ src/
 
 ```bash
 # Clonar repositório
-git clone https://github.com/seu-usuario/shopcart-react.git
+git clone https://github.com/vandersant7/shopcart-react.git
 
 # Acessar pasta
 cd shopcart-react
