@@ -3,8 +3,8 @@ import Login from "../features/Login/Pages/Login";
 import Home from "../features/home/pages/Home";
 import ProductDetails from "../features/home/pages/ProductDetails";
 import Register from "../features/Login/Pages/Register";
-import Checkout from "../features/checkout/Pages/Checkout";
 import PrivateRoute from "./PrivateRoute";
+import Checkout from "../features/checkout/Pages/Checkout";
 
 export default function AppRoutes() {
   return (

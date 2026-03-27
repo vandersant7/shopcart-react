@@ -1,7 +1,7 @@
 import { AddShoppingCart } from "@mui/icons-material";
 import { Box, Card, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useCart } from "../../../context/useCart";
+import { useCart } from "../../../context/CartContext/useCart";
 import { formatCurrency } from "../../../utils/formatCurrency";
 
 export default function ProductCard({ product }) {

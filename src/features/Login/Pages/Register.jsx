@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
-import { useAuth } from "../../../context/useAuth";
+import { useAuth } from "../../../context/AuthContext/useAuth";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Register() {

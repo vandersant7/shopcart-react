@@ -1,8 +1,8 @@
 import { ShoppingCart, AccountCircle } from "@mui/icons-material";
 import { AppBar, Badge, Box, IconButton, Toolbar, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import { useCart } from "../../context/useCart";
-import { useAuth } from "../../context/useAuth";
+import { useCart } from "../../context/CartContext/useCart";
+import { useAuth } from "../../context/AuthContext/useAuth";
 import { useState } from "react";
 import CartDrawer from "../../features/cart/components/CartDrawer";
 

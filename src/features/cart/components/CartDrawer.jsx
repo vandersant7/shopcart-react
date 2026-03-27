@@ -7,7 +7,7 @@ import {
   IconButton,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { useCart } from "../../../context/useCart";
+import { useCart } from "../../../context/CartContext/useCart";
 import CartItem from "./CartItem";
 import { formatCurrency } from "../../../utils/formatCurrency";
 import { useNavigate } from "react-router-dom";

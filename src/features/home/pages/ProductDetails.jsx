@@ -12,7 +12,7 @@ import {
     Container,
 } from "@mui/material";
 import { Add, Remove } from "@mui/icons-material";
-import { useCart } from "../../../context/useCart";
+import { useCart } from "../../../context/CartContext/useCart";
 import { formatCurrency } from "../../../utils/formatCurrency";
 
 export default function ProductDetail() {

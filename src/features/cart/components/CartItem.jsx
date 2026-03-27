@@ -3,7 +3,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { formatCurrency } from "../../../utils/formatCurrency";
-import { useCart } from "../../../context/useCart";
+import { useCart } from "../../../context/CartContext/useCart";
 
 export default function CartItem({ item }) {
     const { incrementItem, decrementItem, removeFromCart } = useCart();

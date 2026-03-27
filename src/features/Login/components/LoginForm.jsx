@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Input from '../../../components/Input/Input';
 import PrimaryButton from '../../../components/Button/PrimaryButton';
-import { useAuth } from '../../../context/useAuth';
+import { useAuth } from '../../../context/AuthContext/useAuth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
