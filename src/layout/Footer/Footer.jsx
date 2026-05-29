@@ -1,37 +1,44 @@
 import { Box, Container, Typography, Link } from "@mui/material";
+import { institutionalLinks, supportLinks } from "./footerData"
+import FooterSocials from "./FooterSocials";
+import FooterBrand from "./FooterBrand";
+import FooterLinks from "./FooterLinks"
 
 export default function Footer() {
   return (
-    <Box
-      component="footer"
+    <Box component="footer"
       sx={{
         backgroundColor: "#1161b1",
         color: "#fff",
-        mt: "auto",
         py: 3,
       }}
     >
-      <Container
-        maxWidth="lg"
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: 2,
-        }}
-      >
-        {/* Marca */}
-        <Typography variant="h6">
-          ShopCart
-        </Typography>
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              md: "2fr 1fr 1fr 1fr",
+            },
+            gap: 4,
+            alignItems: "start",
+          }}
+        >
+          <FooterBrand />
 
-        {/* Links */}
+          <FooterLinks
+            title="Institucional"
+            links={institutionalLinks}
+          />
 
-        {/* Copyright */}
-        <Typography variant="body2">
-          © {new Date().getFullYear()} ShopCart. Todos os direitos reservados.
-        </Typography>
+          <FooterLinks
+            title="Suporte"
+            links={supportLinks}
+          />
+
+          <FooterSocials />
+        </Box>
       </Container>
     </Box>
   );
